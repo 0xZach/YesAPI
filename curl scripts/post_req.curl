@@ -1,6 +1,0 @@
-
-// COUNTRIES
-curl -X POST http://127.0.0.1:8000/api/Countries/ -H 'Content-Type: application/json' -d '{ "id":"FR","name":"France", "flag_link":"fr"}'
-
-// PEOPLE
-curl -X POST http://127.0.0.1:8000/api/People/ -H 'Content-Type: application/json' -d '{ "name":"Sylvain Masclet","age":23,"home_country":"FR", "host_country":"FI"}'
