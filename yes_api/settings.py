@@ -164,6 +164,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# Import every Authentication and Permission package you need here
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
     	#'rest_framework.authentication.TokenAuthentication',
