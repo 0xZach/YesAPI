@@ -1,18 +1,34 @@
-from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticatedOrReadOnly,IsAuthenticated
+from django.shortcuts import get_object_or_404
+
+from .separate_models.CustomModelViewSet import CustomModelViewSet
 
 from .separate_models.Person import Person
 from .separate_models.Country import Country
 
 from .serializers import (PeopleSerializer,CountriesSerializer)
 
-class PeopleViewSet(viewsets.ModelViewSet):
-    # Allows only authenticated users
-    permission_classes = [IsAuthenticated]
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    queryset = Person.objects.all()
-    serializer_class = PeopleSerializer
 
-class CountriesViewSet(viewsets.ModelViewSet):
+
+# this is the most basic a view can get
+class CountriesViewSet(CustomModelViewSet):
+    
+    # Attributes
+    
     queryset = Country.objects.all()
     serializer_class = CountriesSerializer
+    
+    
+    # Methods
+
+
+
+
+class PeopleViewSet(CustomModelViewSet):
+    
+    # Attributes
+    
+    serializer_class = PeopleSerializer
+    queryset = Person.objects.all()
+    
+    
+    # Methods
