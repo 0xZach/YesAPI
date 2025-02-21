@@ -13,7 +13,7 @@ from .Person import Person
 """
 Custom User model for the api authentication
 
-tutorial I used:
+Tutorial I used:
 https://testdriven.io/blog/django-custom-user-model/
 """
 class CustomUser(AbstractBaseUser,PermissionsMixin):

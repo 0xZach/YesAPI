@@ -4,7 +4,7 @@ from .Person import Person
 """
 Custom User manager associated to the CustomUser model
 
-tutorial i used:
+Tutorial I used:
 https://dev.to/chokshiroshan/how-to-use-email-as-username-for-django-authentication-8if
 """
 class CustomUserManager(BaseUserManager):

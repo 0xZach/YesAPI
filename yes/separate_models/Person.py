@@ -7,7 +7,7 @@ class Person(models.Model):
     # Attributs
     
     name = models.CharField(max_length=100)
-    age = models.IntegerField(default=16)
+    age = models.IntegerField(default=16) # need to be replaced with date of birth
     home_country = models.ForeignKey(Country, default=0, related_name='FK_homeC', on_delete=models.CASCADE)
     host_country = models.ForeignKey(Country, default=0, related_name='FK_hostC', on_delete=models.CASCADE)
 
